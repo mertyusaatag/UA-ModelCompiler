@@ -45,6 +45,84 @@ The prefix to be used in the XML file for the XML namespace which the data types
 ``` txt
 The path to the file containing the design file for the namespace.
 ```
-## 
+## NodeDesign
+``` txt
+The base type of all node designs.
+```
+
+### BrowseName
+``` txt
+ The BrowseName is the name used in the information model. The validator will create the BrowseName automatically from the SymbolicName. The BrowseName is qualified by the namespace used for theSymbolicName.
+```
+### DisplayName 
+``` txt
+The DisplayName human readable name for the Node. This element includes an optional key that can be used to look up the display name for other locales in a resource DB. The validator automatically creates the DisplayName from the BrowseName.
+```
+
+### Descripton
+``` txt
+The Description the value of the Description attribute for the Node. This element includes an optional key that can be used to look up the Description for other locales in a resource DB. The validator automatically creates a generic Description from the BrowseName and NodeClass.
+```
+### Childrien
+``` txt
+The Children are the Properties or Components of a Node.
+```
+### References
+``` txt
+The References specify additional references from the Node. These references may refer to other children of the same Node or children of other Nodes defined in the ModelDesign.
+```
+### SymbolicName
+``` txt
+The SymbolicName identifies the Node within the the ModelDesign or within the containing Node. The SymbolicName should always be specified. It is used to create the BrowseName and SymbolicId if they are not specified.
+```
+### SymbolicId
+``` txt
+The SymbolicId is a globally unique identifier for the Node. The validator will create the SymbolicId automatically from the SymbolicName if it is not specified.
+```
+### IsDeclaration
+``` txt
+The IsDeclaration flag indicates that the Node is defined elsewhere and no code will be generated. Nodes that are declarations do not need to be completely defined. They only need to have the information required to generate code for nodes that reference it (e.g. the BaseType).
+```
+### NumericId
+``` txt
+The NumericId specifies the unique numeric id for the Node. It is filled in automatically by reading a CSV file containing the SymbolicIds and an associated UInt32. The validator will automatically assign a unique id if no CSV input is provided. The NumericId or StringId are combined with the Namespace used for the SymbolicId to create the well known UA NodeId for the Node. The generator will create programmatic constants that can be used to reference the Node in code..
+```
+### StringId
+``` txt
+The StringId is an alternate unique identfier for the node. It is used instead of the NumericId if it is specified in the CSV input file.
+```
+### WriteAccess
+``` txt
+The bit mask which indicates which attributes are writeable.
+```
+### PartNo
+``` txt
+The part that defines the node.
+```
+### Category
+``` txt
+A comment seperated list of categories assigned to the node (e.g. Part4/Services or Part5/StateMachines).
+```
+## TypeDesign
+``` txt
+A base type for all Type Nodes (ObjectType, VariableType, DataType and ReferenceType).
+```
+### ClassName
+``` txt
+This is the name for the instance of the type. If not specified the validator creates it by removing the 'Type' suffix from the SymbolicName for the Node.
+```
+### BaseType
+
+
+
+
+
+
+
+
+
+
+
+
 
 
