@@ -15,33 +15,33 @@ Defines a single namespace along with identifiers for the namespace.The Name is 
 
 ```
 
-# Name
+### Name
 
 ``` txt
  A symbolic name for the namespace that can used as a variable name.
 ```
 
-# Prefix
+### Prefix
 
 ``` txt
 The .NET namespace used for the classes produced by the generator
 ```
-# InternalPrefix
+### InternalPrefix
 
 ``` txt
 The .NET namespace used for classes that are only used within a server application.
 ```
-# XmlNamespace
+### XmlNamespace
 ``` txt
  The URI for the XML namespace which the data types belong to if it is different from the URI for the model namespace
 ```
 
-# XmlPrefix
+### XmlPrefix
 ``` txt
 The prefix to be used in the XML file for the XML namespace which the data types belong to. Used only XmlNamespace is set.
 ```
 
-# FilePath
+### FilePath
 ``` txt
 The path to the file containing the design file for the namespace.
 ```
