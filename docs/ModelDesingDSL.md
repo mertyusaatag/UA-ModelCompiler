@@ -112,9 +112,81 @@ A base type for all Type Nodes (ObjectType, VariableType, DataType and Reference
 This is the name for the instance of the type. If not specified the validator creates it by removing the 'Type' suffix from the SymbolicName for the Node.
 ```
 ### BaseType
-
-
-
+``` txt
+The SymbolicId for the BaseType.
+```
+### IsAbstract
+``` txt
+Whether the Type is abstract.
+```
+### NoClassGeneration
+``` txt
+Whether to supress class generation for the type.
+```
+## ObjectTypeDesign
+``` txt
+ObjectTypes define structure of an Object in the information model.
+```
+## VariableTypeDesign
+``` txt
+VariableTypes define structure of a Variable in the information model.
+```
+## DataTypeDesign
+``` txt
+DataTypes define structure of a Value for Variables in the information model.
+```
+## ReferenceTypeDesign
+``` txt
+ReferenceType define typed references between Nodes
+```
+## InstanceDesign
+``` txt
+A base type for all Instance Nodes (Object, Variable, and Method)
+```
+## ViewDesign
+``` txt
+A View Node.
+```
+### InstanceDesign
+``` txt
+Whether the View generates events.
+```
+### ContainsNoLoops
+``` txt
+Specifies that the View contains a non-looping hierarchy.
+```
+## ObjectDesign
+``` txt
+Defines the structure of an Object in the information model
+```
+## VariableDesign
+``` txt
+Defines the structure of a Variable in the information model.
+```
+## MethodDesign
+``` txt
+Defines the a Method in the information model.
+```
+## PropertyDesign
+``` txt
+Defines a Variable which is a Property for a Node.
+```
+## EncodingDesign
+``` txt
+Defines an Object which is a DataTypeEncoding for a DataType
+```
+## DictionaryDesign
+``` txt
+Defines an Variable which is a DataTypeDictionary.
+```
+## Reference
+``` txt
+Defines a reference between two nodes.The SourceId is the SymbolicId of the Node that contains the Reference. The SourcePath and TargetPath are RelativePaths specified using the syntax defined in Part 4. The order of the Namespaces defined in the Namespaces element is used to determine the namespace index used in the RelativePaths
+```
+## Parameter
+``` txt
+Defines a Field in a DataType or Argument of a Method.
+```
 
 
 
